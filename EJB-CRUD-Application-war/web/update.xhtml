@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>update users</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1>
+                    <h:outputText value="Create/Edit Users"/>
+                </h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="First Name" for="firstName" />
+                    <h:inputText id="firstName" value="#{userController.users.firstName}" title="firstName" />
+                    <h:outputLabel value="Last Name" for="lastName" />
+                    <h:inputText id="lastName" value="#{userController.users.lastName}" title="lastName" />
+                    <h:outputLabel value="Telephone" for="tp" />
+                    <h:inputText id="tp" value="#{userController.users.tp}" title="tp" /> <br><hr></hr></br>
+                    <h:commandButton value="Update" action="#{userController.update()}" />
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+
